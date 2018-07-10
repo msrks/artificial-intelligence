@@ -41,7 +41,7 @@ You must complete the required functions in the 'solution.py' file (copy in code
 
 YOU SHOULD EXPECT TO MODIFY OR WRITE YOUR OWN UNIT TESTS AS PART OF COMPLETING THIS PROJECT. There is no requirement to write test cases, but the Project Assistant test suite is not shared with students so writing your own tests may be necessary to find and resolve any errors that arise there.
 
-1. Add the two new diagonal units to the `unitlist` at the top of solution.py. Re-run the local tests with `python -m unittest` to confirm your solution. 
+1. Add the two new diagonal units to the `unitlist` at the top of solution.py. Re-run the local tests with `pytest` to confirm your solution. 
 
 1. Copy your code from the classroom for the `eliminate()`, `only_choice()`, `reduce_puzzle()`, and `search()` into the corresponding functions in the `solution.py` file.
 
@@ -64,3 +64,31 @@ Once your project passes all test cases on the Project Assistant, submit the zip
 **Note:** The `pygame` library is required to visualize your solution -- however, the `pygame` module can be troublesome to install and configure. It should be installed by default with the AIND conda environment, but it is not reliable across all operating systems or versions. Please refer to the pygame documentation [here](http://www.pygame.org/download.shtml), or discuss among your peers in the slack group if you need help.
 
 Running `python solution.py` will automatically attempt to visualize your solution, but you mustuse the provided `assign_value` function (defined in `utils.py`) to track the puzzle solution progress for reconstruction during visuzalization.
+
+```bash
+$ python solution.py
+    2     123456789 123456789 |123456789 123456789 123456789 |123456789 123456789 123456789 
+123456789 123456789 123456789 |123456789 123456789     6     |    2     123456789 123456789 
+123456789 123456789     1     |123456789 123456789 123456789 |123456789     7     123456789 
+------------------------------+------------------------------+------------------------------
+123456789 123456789     6     |123456789 123456789     8     |123456789 123456789 123456789 
+    3     123456789 123456789 |123456789     9     123456789 |123456789 123456789     7     
+123456789 123456789 123456789 |    6     123456789 123456789 |    4     123456789 123456789 
+------------------------------+------------------------------+------------------------------
+123456789     4     123456789 |123456789 123456789 123456789 |    8     123456789 123456789 
+123456789 123456789     5     |    2     123456789 123456789 |123456789 123456789 123456789 
+123456789 123456789 123456789 |123456789 123456789 123456789 |123456789 123456789     3     
+()
+2 6 7 |9 4 5 |3 8 1 
+8 5 3 |7 1 6 |2 4 9 
+4 9 1 |8 2 3 |5 7 6 
+------+------+------
+5 7 6 |4 3 8 |1 9 2 
+3 8 4 |1 9 2 |6 5 7 
+1 2 9 |6 5 7 |4 3 8 
+------+------+------
+6 4 2 |3 7 9 |8 1 5 
+9 3 5 |2 8 1 |7 6 4 
+7 1 8 |5 6 4 |9 2 3 
+()
+```
